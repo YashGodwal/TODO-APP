@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-const port=3222;
+const PORT=3222;
 // conenction to mongodb
 mongoose.connect("mongodb+srv://yashgodwal:porsche911@cluster0.k7ybm4v.mongodb.net/todo_express", {
   useNewUrlParser: true,
@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 
 
 app.listen(port,(req,res) => {
-    console.log(`SERVER IS LISTENING ON ${port}`);
+    console.log(`SERVER IS LISTENING ON ${PORT}`);
 })
 // routes
 app.use(require("./routes/index"))
